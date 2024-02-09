@@ -12,9 +12,9 @@ router.post("/add",async(req,res)=>{
         {
             status:"success"
         }
-    )
-    
+    ) 
 })
+
 
 
 module.exports=router
