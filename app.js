@@ -3,6 +3,7 @@ const cors=require("cors")
 const mongoose=require("mongoose")
 
 const userRoute=require("./controllers/userRouter")
+const postRoute=require("./controllers/postRouter")
 
 const app=express()
 
@@ -14,5 +15,5 @@ mongoose.connect("mongodb+srv://geetika37:geethu3377@cluster0.s1qugri.mongodb.ne
 )
 
 app.use("/api/user",userRoute)
-
+app.use("/api/post",postRoute)
 app.listen(3001,console.log("server runnng"))
