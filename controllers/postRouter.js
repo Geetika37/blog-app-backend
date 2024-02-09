@@ -12,8 +12,17 @@ router.post("/add",async(req,res)=>{
         {
             status:"success"
         }
-    )
-    
+    ) 
+})
+
+router.get("/view_all",async(req,res)=>{
+    //its single line this is used to join to page
+    let result=await postModel.find()
+    .populate("userId","name emailID -_id")
+    .exec()
+
+
+    res.json(result)
 })
 
 
