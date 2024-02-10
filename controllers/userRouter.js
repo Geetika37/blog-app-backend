@@ -32,4 +32,9 @@ router.post("/sign_up",async(req,res)=>{
     
 })
 
+router.get("/view_all",async(req,res)=>{
+    let data=await userModel.find()
+    res.json(data)
+})
+
 module.exports=router
